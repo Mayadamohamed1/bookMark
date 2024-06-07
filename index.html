@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMark</title>
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1 class="text-center text-white mt-5">Bookmarker</h1>
+            <hr>
+        </div>
+        <div class="text-center">
+            <h3 class="text-white"><i class="fa-solid fa-bookmark pe-2 text-warning"></i>Bookmark your favorite  <i class="fa-solid fa-bookmark pe-2 text-warning"></i></h3>
+        </div>
+        <div>
+            <label class="text-white fs-4"><i class="fa-solid fa-book pe-2 text-warning"></i>Site Name</label>
+            <input type="text" class="form-control mt-1 mb-4" id="siteName" oninput="validName()" placeholder="Bookmarker Name">
+        </div>
+        <div>
+            <label class="text-white fs-4"><i class="fa-solid fa-link pe-2 text-warning"></i>Site URL</label>
+            <input type="text" class="form-control mt-1 mb-4" id="siteUrl" oninput="validUrl()" placeholder="Website URL">
+        </div>
+        <button id="submitBtn" class="btn btn-warning rounded-3 my-4 d-block mx-auto" onclick="addBookMark()"> Submit</button>
+        <button id="updateBtn" class="btn btn-warning rounded-3 my-4 d-block mx-auto d-none" onclick="finishUpdate()"> Update</button>
+        <hr>
+    
+        <table class="table text-center mt-4 bg-light">
+            <thead>
+                <th>Index</th>
+                <th>Website Name</th>
+                <th>Visit</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </thead>
+            <tbody id="tBody">
+             
+            </tbody>
+        </table>
+    </div>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
